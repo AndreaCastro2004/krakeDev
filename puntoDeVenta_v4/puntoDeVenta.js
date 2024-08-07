@@ -93,8 +93,7 @@ calcularValorTotal = function () {
         Si funciona, hacer un commit
     */
    mostrarTexto("lblResumen", "El valor a pagar por "+cantidad+" productos de "+nombreProducto+" con "+porcentajeDescuento+"% "+ 
-    "de descuento es: "+valorTotal
-   );
+    "de descuento es: "+valorTotal);
 }
 
 limpiar = function () {
@@ -103,5 +102,15 @@ limpiar = function () {
         Dejar todos los textos de los montos con el valor 0.0
         Si funciona, hacer un commit
      */
+    mostrarTextoEnCaja("txtProducto","");
+    mostrarTextoEnCaja("txtCantidad","");
+    mostrarTextoEnCaja("txtPrecio","");
+    mostrarTextoEnCaja("txtPorcentajeDescuento","");
+    mostrarTexto("lblSubtotal","0.0");
+    mostrarTexto("lblDescuento","0.0");
+    mostrarTexto("lblValorIVA","0.0");
+    mostrarTexto("lblTotal","0.0");
+    mostrarTexto("lblResumen","");
+
 }
 /* SI TODO FUNCIONA, HACER UN PUSH */
