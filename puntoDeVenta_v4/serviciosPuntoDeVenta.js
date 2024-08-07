@@ -15,12 +15,17 @@ return valorDescuento;
 calcularIva=function(monto){
     let iva
     iva=((monto*12)/100);
-    return iva
+    return iva;
 }
 
 calculoDescuentoIva=function(valorSubtotal,valorDescuento){
     let monto 
     monto=valorSubtotal-valorDescuento
-    return monto
+    return monto;
 }
 
+calcularTotal=function(subtotal,descuento,iva){
+    let total;
+    total=subtotal-descuento+iva
+    return total;
+}
