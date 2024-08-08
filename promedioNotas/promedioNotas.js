@@ -12,4 +12,9 @@ calcularPromedioNotas=function(){
     valorPromedio=promedio.toFixed(2);
     mostrarTexto("lblPromedio",valorPromedio);
 
+    if(valorPromedio>7){
+        mostrarImagen("lblImagen","./imagenes/giphy.gif");  
+    }else{
+        mostrarImagen("lblImagen","./imagenes/imagen2.gif");  
+    }
 }
