@@ -18,7 +18,7 @@ body{
 .imagen{
     display: flex;
     flex:5;
- 
+    background-color: rgba(255, 255, 255, 0.651);
     justify-content: center;
     align-items: center;
 }
@@ -75,4 +75,17 @@ body{
 }
 h1{
     font-size: 50px;
+}
+.info{
+    font-size: 40px;
+    color:rgb(7, 75, 102) ;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.dados{
+    color: black;
+    margin-left: 40px;
+}
+.mensaje{
+    color: rgb(190, 162, 0);
+    
 }

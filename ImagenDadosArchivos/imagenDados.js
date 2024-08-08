@@ -1,9 +1,48 @@
+let puntos;   //las 2 occiones son validas
+puntos=0;
+let lanzamientos=5;
+
+
 jugar=function(){
     let resultado;
     resultado=lanzarDado();
     console.log(resultado);
     mostrarCara(resultado);
+    modificarPuntos(resultado);
+    modificarLanzamientos();
+    
+    
 }
+
+//no recibe parametros resta 1 a la variable lanzamientos
+//guarda el resultado en la misma variable y muestra en pantalla
+modificarLanzamientos=function(){
+    lanzamientos=lanzamientos-1
+    cambiarTexto("lblLanzamientos",lanzamientos);
+    //si llega a cero mostrar perdiste
+    if(lanzamientos==0){
+        cambiarTexto("lblMensaje","GAME OVER");
+        limpiar();
+    }      
+}
+limpiar=function(){
+    //Coloca el puntaje en 0 y el lanzamiento en 5
+    cambiarTexto("lblPuntos",puntos=0);
+    cambiarTexto("lblLanzamientos",lanzamientos=5);
+    cambiarImagen("imgDados","");
+}
+
+modificarPuntos=function(numero){  
+    puntos=puntos+numero
+    cambiarTexto("lblPuntos",puntos);
+    //si o btiene mas de 20 mostrar ganaste
+    if(puntos>20){
+        cambiarTexto("lblMensaje","GANASTE!!");
+        limpiar();
+    }
+   
+}
+
 
 lanzarDado=function(){
     let aleatorio;
