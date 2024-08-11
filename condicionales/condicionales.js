@@ -18,7 +18,7 @@ calcularTasaInteres=function(ingresoAnual){
         valorTasa=(12/360)*ingresoAnualFloat  //tasa 12%
         return valorTasa
     }
-};
+}
 calcularCapacidadPago=function(edad,ingresos,egresos){
     let montoDisponible;
     let valorCuota;
@@ -48,21 +48,21 @@ calcularDescuento=function(precio,cantidad){
     let valorApagar;
     precioFloat=parseFloat(precio);
     cantidadInt=parseInt(cantidad);
-    if(cantidad>=0 && cantidad<3){
-        valorApagar=precio*cantidad
+    if(cantidadInt>=0 && cantidadInt<3){
+        valorApagar=precioFloat*cantidadInt
         return valorApagar
     }else if(cantidadInt>=3 && cantidadInt<=5){
-        subtotal=precio*cantidad
+        subtotal=precioFloat*cantidadInt
         descuento=(subtotal*2)/100  //2% de descuento
         valorApagar=subtotal-descuento
         return valorApagar;
     }else if(cantidadInt>=6 && cantidadInt<=11){
-        subtotal=precio*cantidad
+        subtotal=precioFloat*cantidadInt
         descuento=(subtotal*3)/100  //3% de descuento
         valorApagar=subtotal-descuento
         return valorApagar;
     }else if(cantidadInt>=12){
-        subtotal=precio*cantidad
+        subtotal=precioFloat*cantidadInt
         descuento=(subtotal*4)/100  //4% de descuento
         valorApagar=subtotal-descuento
         return valorApagar;
@@ -145,7 +145,7 @@ darPermiso=function(notaMate,notaFisica,notaGeometria){
     mateFloat=parseFloat(notaMate);
     fisicaFloat=parseFloat(notaFisica);
     geometriaFloat=parseFloat(notaGeometria);
-    if(notaMate>90 || notaFisica>90 || notaGeometria>90){
+    if(mateFloat>90 || fisicaFloat>90 || geometriaFloat>90){
         permiso=true
         return permiso
     }else{
@@ -161,7 +161,7 @@ otorgarPermiso=function(notaMatematica,notaFisica,notaGeometria){
     mateFloat=parseFloat(notaMatematica);
     fisicaFloat=parseFloat(notaFisica);
     geometriaFloat=parseFloat(notaGeometria);
-    if((mateFloat>90 || fisicaFloat>90)&&(notaGeometria>80)){
+    if((mateFloat>90 || fisicaFloat>90)&&(geometriaFloat>80)){
         permiso=true
         return permiso
     }else{
