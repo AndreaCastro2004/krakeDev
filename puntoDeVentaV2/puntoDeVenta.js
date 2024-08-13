@@ -38,7 +38,6 @@ limpiar = function () {
     mostrarTexto("lblDescuento","0.0");
     mostrarTexto("lblValorIVA","0.0");
     mostrarTexto("lblTotal","0.0");
-    mostrarTexto("lblResumen","");
 
 }
 
@@ -66,36 +65,39 @@ calcularDescuentoPorVolumen=function(subtotal,cantidad){
 
 esProductoValido=function(nombre){
     let tamanio=nombre.length;
-    let resultado;
+    let resultado=false
     if(tamanio>10){
         resultado=mostrarTexto("lblError1","TIENE MAS DE 10 CARACTERES");
-        return resultado
-    }else{
-        resultado=mostrarTexto("lblError1","")
-        return resultado
+        resultado=true
     }
+    if(resultado==false){
+        resultado=mostrarTexto("lblError1","")
+    }
+    return !resultado
 }
 
 esCantidadValida=function(cantidad){
-    let hayErrores;
+    let hayErrores=false
         if (cantidad<0 || cantidad>100) {
             hayErrores=mostrarTexto("lblError2","INGRESE CANTIDAD ENTRE 0 Y 100");
-            return hayErrores;
-        }else{
-            hayErrores=mostrarTexto("lblError2", "");
-            return hayErrores;
+            hayErrores=true
         }
+        if(hayErrores==false){
+            hayErrores=mostrarTexto("lblError2", "");
+        }
+        return !hayErrores
 }
 
 esPrecioValido=function(precio){
-    let valido;
+    let valido=false
     if(precio<0 || precio>50){
         valido=mostrarTexto("lblError3", "INGRESE PRECIO ENTRE 0 Y 50 ")
-        return valido
-    }else{
-        valido=mostrarTexto("lblError3", "")
-        return valido
+        valido=true
     }
+    if(valido==false) {
+        valido=mostrarTexto("lblError3", "")
+    }
+    return !valido
 }
 obligatorio=function(caja1,caja2,caja3){
     let resultado=false
