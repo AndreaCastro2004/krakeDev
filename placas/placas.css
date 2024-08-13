@@ -31,8 +31,9 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 30px;
     margin-bottom: 40px;
+    
 }
 .cajaPlaca{
     margin-top: 30px;
@@ -78,4 +79,14 @@ body{
     justify-content: center;
     margin-left: 50px;
     margin-right: 50px;
+}
+.areaResultado{
+    display: flex;
+    flex:1;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    background-color: #ad67464f;
 }
