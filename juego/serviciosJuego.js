@@ -1,7 +1,7 @@
 obtenerAleatorio=function(){
     let randon;
-    let numero;
-    let resultado
+    let numeroMultipicado;
+    let resultado;
     let entero;
     randon=Math.random();
     numeroMultipicado=randon*3
