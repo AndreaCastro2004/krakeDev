@@ -112,3 +112,12 @@ obtenerProvincia=function(placa){
     }
 
 }
+limpiar=function(){
+    mostrarTextoEnCaja("txtPlaca","");
+    mostrarTexto("lblProvincia","");
+    mostrarTexto("lblVehiculo","");
+    mostrarTexto("lblPicoYPlaca","");
+    mostrarTexto("lblValidacion","");
+    mostrarTexto("lblErroresValidacion","");
+    
+}
