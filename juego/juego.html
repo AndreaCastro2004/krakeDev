@@ -7,7 +7,29 @@
         <link href="juego.css" rel="stylesheet"/>
     </head>
     <body>
-        <input type="button" value="JUGAR" onclick="determinarGanador();"/>
-        <img src=""  id="lblImagen"/>
+        <div class="principal">
+            <div class="contenido">
+                <div class="titulo">
+                    JUEGA PIEDRA PAPEL O TIJERA
+                </div>
+                <div class="imagenes">
+                    <img src="./imagenes/piedra.png" onclick="jugar('piedra');">
+                    <img src="./imagenes/papel.png" onclick="jugar('papel');">
+                    <img src="./imagenes/tijeras.png" onclick="jugar('tijeras');">
+                    <div id="lblGanador" class="resultado">
+
+                    </div>
+                </div>
+                <div class="computador">
+                    <div class="letra">
+                        COMPUTADOR
+                    </div>
+                    <div class="imagenCompu">
+                        <img src="" id ="lblComputador" />
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </body>
 </html>
