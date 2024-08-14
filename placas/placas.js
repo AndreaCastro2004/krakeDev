@@ -3,6 +3,7 @@ validarPlaca=function(){
     let valorIngresado;
     let erroresEstructura;
     let provincia;
+    let tipoVehiculo;
     componente=document.getElementById("txtPlaca");
     valorIngresado=componente.value;
     erroresEstructura=validarEstructura(valorIngresado);
@@ -14,6 +15,13 @@ validarPlaca=function(){
         }else{
             mostrarTexto("lblProvincia", "INCORRECTA")
         }
+        tipoVehiculo=obtenerTipoVehiculo(valorIngresado);
+        if(tipoVehiculo != null){
+            mostrarTexto("lblVehiculo",tipoVehiculo)
+        }else{
+            mostrarTexto("lblVehiculo","INCORRECTO")
+        }
+        
     }else{
         mostrarTexto("lblValidacion","ESTRUCTURA INCORRECTA");
         mostrarTexto("lblErroresValidacion",erroresEstructura)

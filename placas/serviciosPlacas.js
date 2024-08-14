@@ -73,3 +73,36 @@ validarEstructura=function(placa){
         return errores;
     }
 }
+obtenerTipoVehiculo=function(placa){
+    let letra;
+    let vehiculo= null
+    letra=placa.charAt(1);
+    if(letra == "A" || letra == "Z"){
+        vehiculo="Vehiculo comercial (como taxis o autobuses)"
+    }
+    if(letra == "E"){
+        vehiculo="Vehiculos Gubernamentales"
+    }
+    if(letra == "X"){
+        vehiculo="Vehiculos de uso Oficial"
+    }
+    if(letra == "S"){
+        vehiculo="Vehiculos de Gobierno Provincial"
+    }
+    if(letra == "M"){
+        vehiculo="Vehiculos Municipales"
+    }
+    if(letra == "B" || letra== "C" || letra=="D" || letra=="F" || letra=="G" || letra =="H"  || 
+        letra == "I" || letra== "J" || letra=="G" || letra=="K" || letra=="L" || letra =="N" || 
+        letra =="Ñ" ||letra == "O" || letra== "P" || letra=="Q" || letra=="R"|| 
+        letra == "T" || letra== "U" || letra=="V" || letra=="W" || letra=="Y" ){
+        
+            vehiculo="Vehiculo Particular (PRIVADO)"
+    }
+    if(vehiculo != null){
+        return vehiculo;
+    }else{
+        vehiculo=null
+        return vehiculo;
+    }
+}
