@@ -4,6 +4,7 @@ validarPlaca=function(){
     let erroresEstructura;
     let provincia;
     let tipoVehiculo;
+    let picoYPlaca;
     componente=document.getElementById("txtPlaca");
     valorIngresado=componente.value;
     erroresEstructura=validarEstructura(valorIngresado);
@@ -21,6 +22,8 @@ validarPlaca=function(){
         }else{
             mostrarTexto("lblVehiculo","INCORRECTO")
         }
+        picoYPlaca=obtenerDiaPicoYPlaca(valorIngresado);
+        mostrarTexto("lblPicoYPlaca", picoYPlaca);
         
     }else{
         mostrarTexto("lblValidacion","ESTRUCTURA INCORRECTA");
