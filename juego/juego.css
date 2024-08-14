@@ -1,0 +1,88 @@
+body{
+    background-image: url("./imagenes/fondo.jpg");
+    background-size: cover;
+}
+   
+.principal{
+    display: flex;
+    background-color: rgba(240, 248, 255, 0.26);
+    margin-left: 0px;
+    margin-right:0px;
+    flex-direction: row;
+    margin-top: 50px;
+}
+.contenido{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+.titulo{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    flex-direction: row;
+    color: rgb(255, 255, 255);
+}
+.puntaje{
+    display: flex;
+    flex-direction: row;
+    color: aliceblue;
+    
+}
+.puntajeComputadora{
+    display: flex;
+    flex-direction: row;
+    color: aliceblue;
+    margin-top: 5px;
+}
+.imagenes{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    color: aliceblue;
+    margin-right: 25px;
+    
+    
+}
+.estiloImagen{
+    width: 250px;
+    height: 300px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 30px;
+}
+.imagenCompu{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.letra{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+    color: azure;
+}
+.boton{
+    display: flex;
+    flex:1;
+    justify-content: center;
+    margin-left: 10px;
+}
+.estiloBoton{
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+    border-color: #5a793c;
+    align-items: center;
+    font-size: 19px;
+    font-family: 'Courier New', Courier, monospace;
+    width: 200px;
+    height: 40px;
+    margin-top: 5px;
+}
