@@ -36,6 +36,35 @@ invertirCadena=function(cadena){
 
     cadenaInvertida=resultado
     mostrarTexto("mensaje",cadenaInvertida);
+}
+buscarLetra=function(cadena,letra){
+    let letraIterada;
+    let existeLetra=false
 
-    
+    for(let i=0;i<cadena.length;i++){
+        letraIterada=i.charAt(i)
+        if(letraIterada==letra){
+            existeLetra=true
+        }
+    }
+    if(existeLetra==true){
+        console.log("existe")
+        return true;
+    }else{
+        console.log("no existe")
+        return false;
+    }
+}
+contarMayusculas=function(cadena){
+    let letra;
+    let contadorMayuscula=0
+    for(i=0; i<cadena.length;i++){
+        letra=cadena.charAt(i);
+    }
+    //con la funcion es mayuscula que no esta en utilitarios pero la tenemos en otro archivo
+    if(esMayuscula(letra)){
+        //Es lo mismo que contadorMayuscula=contadorMayuscula+1
+        contadorMayuscula++
+    }
+    console.log(contadorMayuscula)
 }
