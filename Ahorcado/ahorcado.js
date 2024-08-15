@@ -52,3 +52,14 @@ mostrarLetra=function(letra,posicion){
         mostrarTexto("div4",letra);
     }
 }
+validar=function(letra){
+    let letrasEncontradas=0
+    let valorLetra;
+    for(let posicion=0;posicion<=palabraSecreta.length-1; posicion++){
+        valorLetra=palabraSecreta.charAt(posicion);
+        if(valorLetra==letra){
+            mostrarLetra(letra,posicion)
+            letrasEncontradas=letrasEncontradas+1
+        }
+    }
+}
