@@ -1,5 +1,6 @@
 //No se olvide de respirar, mantenga la calma y demuestre lo que sabe
-palabraSecreta=""
+let palabraSecreta;
+
 esMayuscula=function(caracter){
     let letra;
     let mayuscula=false
@@ -17,7 +18,6 @@ guardarPalabra=function(){
     let letraMayuscula;
     let longitud;
     let letra;
-    let palabraSecreta;
     componente=document.getElementById("txtSecreta");
     valorIngresado=componente.value
     longitud=valorIngresado.length
@@ -27,8 +27,8 @@ guardarPalabra=function(){
             letraMayuscula=esMayuscula(letra);
         }
         if(letraMayuscula==true){
-            palabraSecreta=valorIngresado
-            console.log(palabraSecreta)
+            palabraSecreta=valorIngresado;
+            
         }else{
             alert("DEBE INGRESAR UNA PALABRA DE 5 LETRAS MAYUSCULAS");
         }
@@ -61,5 +61,18 @@ validar=function(letra){
             mostrarLetra(letra,posicion)
             letrasEncontradas=letrasEncontradas+1
         }
+    }
+}
+ingresarLetra=function(){
+    let componente;
+    let valorIngresado;
+    let letraMayuscula;
+    componente=document.getElementById("txtLetra");
+    valorIngresado=componente.value
+    letraMayuscula=esMayuscula(valorIngresado);
+    if(letraMayuscula==true){
+        validar(valorIngresado);
+    }else{
+        alert("SOLO SE ACEPTAN MAYUSCULAS")
     }
 }
