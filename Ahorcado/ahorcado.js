@@ -69,7 +69,6 @@ validar=function(letra){
     if(letrasEncontradas==0){
         errores=errores+1
         mostrarAhorcado();
-        alert("LA LETRA NO ES PARTE DE LA PALABRA");
     }
 }
 ingresarLetra=function(){
@@ -83,10 +82,10 @@ ingresarLetra=function(){
         intentos=intentos+1
         validar(valorIngresado);
         if(coincidencias==5){
-            alert("HAS GANADO ;)")
+            mostrarImagen("ahorcadoImagen","ganador.gif")
         }
         if(intentos==10){
-            alert("HAS PERDIDO TwT")
+            mostrarImagen("ahorcadoImagen","gameOver.gif");
         }
     }else{
         alert("SOLO SE ACEPTAN MAYUSCULAS")
@@ -94,33 +93,30 @@ ingresarLetra=function(){
 }
 mostrarAhorcado=function(){
     if (errores==1){
-        mostrarImagen("Ahorcado_01.png");
+        mostrarImagen("ahorcadoImagen","Ahorcado_01.png");
     }
     if (errores==2){
-        mostrarImagen("Ahorcado_02.png");
+        mostrarImagen("ahorcadoImagen","Ahorcado_02.png");
     }
     if (errores==3){
-        mostrarImagen("Ahorcado_03.png");
+        mostrarImagen("ahorcadoImagen","Ahorcado_03.png");
     }
     if (errores==4){
-        mostrarImagen("Ahorcado_04.png");
+        mostrarImagen("ahorcadoImagen","Ahorcado_04.png");
     }
     if (errores==5){
-        mostrarImagen("Ahorcado_05.png");
+        mostrarImagen("ahorcadoImagen","Ahorcado_05.png");
     }
     if (errores==6){
-        mostrarImagen("Ahorcado_06.png");
+        mostrarImagen("ahorcadoImagen","Ahorcado_06.png");
     }
     if (errores==7){
-        mostrarImagen("Ahorcado_07.png");
+        mostrarImagen("ahorcadoImagen","Ahorcado_07.png");
     }
     if (errores==8){
-        mostrarImagen("Ahorcado_08.png");
+        mostrarImagen("ahorcadoImagen","Ahorcado_08.png");
     }
     if (errores==9){
-        mostrarImagen("Ahorcado_09.png");
-    }
-    if (errores==10){
-        mostrarImagen("gameOver.gif");
+        mostrarImagen("ahorcadoImagen","Ahorcado_09.png");
     }
 }
