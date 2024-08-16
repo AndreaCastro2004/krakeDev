@@ -21,3 +21,19 @@ provarAgregar=function(){
 agregarNota=function(nota){
     notas.push(nota);
 }
+ejecutarPromedio=function(){
+    let promedio;
+    promedio=calcularPromedio();
+    mostrarTexto("lblPromedio",promedio);
+}
+calcularPromedio=function(){
+    let notaR;
+    let sumaNotas=0
+    let promedio;
+    for(let posicion=0;posicion<notas.length;posicion++){
+        notaR=notas[posicion]
+        sumaNotas=notaR+sumaNotas
+    }
+    promedio=sumaNotas/notas.length
+    return promedio;
+}
