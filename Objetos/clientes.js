@@ -52,5 +52,32 @@ crearClientes=function(){
     nuevoCliente.cedula=valorCedula;
     nuevoCliente.nombre=valorNombre;
     nuevoCliente.edad=valorEdad;
-    agregarCliente(nuevoCliente);
+    if(errores(valorCedula,valorNombre,valorEdad) == false){
+        agregarCliente(nuevoCliente);
+    }
+}
+errores=function(valor1,valor2,valor3){
+    let hayErrores=false
+    if(valor1==""){
+        mostrarTexto("lblErrorCedula","CAMPO OBLIGATORIO")
+        hayErrores=true
+    }else if(valor1.length<10 || valor1.length>10){
+        mostrarTexto("lblErrorCedula","DEBE TENER MAXIMO 10 CARACTERES"); 
+        hayErrores=true
+    }
+    if(valor2==""){
+        mostrarTexto("lblErrorNombre","CAMPO OBLIGATORIO")
+        hayErrores=true
+    }else if(valor2.length>15){
+        mostrarTexto("lblErrorNombre","DEBE TENER MAXIMO 15 CARACTERES"); 
+        hayErrores=true
+    }
+    if(isNaN(valor3)){
+        mostrarTexto("lblErrorEdad","CAMPO OBLIGATORIO")
+        hayErrores=true
+    }else if(valor3>100){
+        mostrarTexto("lblErrorEdad","INGRES UNA EDAD VALIDA ENTRE 0 Y 100"); 
+        hayErrores=true
+    }
+    return hayErrores;
 }
