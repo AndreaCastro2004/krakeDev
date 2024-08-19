@@ -34,3 +34,24 @@ crearProducto=function(){
         console.log("Producto 2 tiene mayor stock")
     }
 }
+modificarAtributos=function(){
+    let cuenta={
+        numero:"209830203",
+        saldo:0.0,
+    }
+    cuenta.saldo=100
+    cuenta.saldo+=10
+    console.log(cuenta.saldo);
+}
+crearCliente=function(){
+    //Primera forma de hacer un objeto
+    let cliente={
+        cedula:"17248993048",
+        nombre:"Araceli"
+    }
+    //Segunda forma de hacer un objeto
+    let cliente2={}
+    cliente2.nombre="Rosita"
+    cliente2.apellido="Salcedo"
+    cliente2.cedula="1871548591"
+}
