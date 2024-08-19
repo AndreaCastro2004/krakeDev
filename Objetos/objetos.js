@@ -55,3 +55,40 @@ crearCliente=function(){
     cliente2.apellido="Salcedo"
     cliente2.cedula="1871548591"
 }
+//Retornan Objetos
+probarIncrementoSaldo=function(){
+    //no necesaria mente se va a utilizar el nombre de la misma variable cuenta y monto
+    let cta={numero:"1232434",saldo:55.0}
+    incrementarSaldo(cta,100);
+    console.log(cta.saldo);
+}
+
+probarDeterminarMayor=function(){
+    let mayor;
+    let persona1={
+        nombre: "Maria",
+        edad:22
+    }
+    let persona2={
+        nombre:"Jose",
+        edad:45
+    }
+    mayor=determinarMayor(persona1,persona2);
+    if(mayor != null){
+        console.log("EL MAYOR ES: "+mayor.nombre);
+    }
+}
+//Recibe objetos
+incrementarSaldo=function(cuenta,monto){
+    cuenta.saldo+=monto
+}
+
+determinarMayor=function(persona1,persona2){
+    if(persona1.edad>persona2.edad){
+        return persona1;
+    }else if(persona2.edad>persona1.edad){
+        return persona2;
+    }else{
+        return null
+    }
+}
