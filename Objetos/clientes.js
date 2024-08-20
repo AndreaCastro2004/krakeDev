@@ -21,6 +21,17 @@ mostrarClientes=function(){
     contenidoTabla+="</table>"
     cmpTabla.innerHTML=contenidoTabla;
 }
+ejecutarBusqueda=function(){
+    let valorCedula=recuperarTexto("txtCedulaBusqueda");
+    let cliente=buscarCliente(valorCedula);
+    if(cliente==null){
+        alert("Cliente NO ENCONTRADO");
+    }else{
+        mostrarTextoEnCaja("txtCedula",cliente.cedula);
+        mostrarTextoEnCaja("txtNombre",cliente.nombre);
+        mostrarTextoEnCaja("txtEdad",cliente.edad);
+    }
+}
 buscarCliente=function(cedula){
     let elementoCliente;
     let clienteEncontrado=null
