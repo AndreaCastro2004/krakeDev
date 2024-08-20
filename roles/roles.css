@@ -190,6 +190,7 @@ body{
 }
 #contenidoTabla td{
     padding: 12px 15px;
+    border: #cacaca 1px solid ;
 }
 #contenidoTabla tbody tr{
     border-bottom: 1px solid #cacaca;
