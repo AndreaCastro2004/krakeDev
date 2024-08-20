@@ -21,6 +21,24 @@ mostrarClientes=function(){
     contenidoTabla+="</table>"
     cmpTabla.innerHTML=contenidoTabla;
 }
+guardarCambios=function(){
+    let valorCedula=recuperarTexto("txtCedula");
+    let valorNombre=recuperarTexto("txtNombre");
+    let valorEdad=recuperarFloat ("txtEdad");
+    let datosCliente={ };
+    datosCliente.cedula=valorCedula;
+    datosCliente.nombre=valorNombre;
+    datosCliente.edad=valorEdad;
+    modificarCliente(datosCliente);
+    mostrarClientes();
+}
+modificarCliente=function(cliente){
+    let clienteEncontrado=buscarCliente(cliente.cedula);
+    if(clienteEncontrado!=null){
+        clienteEncontrado.nombre=cliente.nombre;
+        clienteEncontrado.edad=cliente.edad;
+    }
+}
 ejecutarBusqueda=function(){
     let valorCedula=recuperarTexto("txtCedulaBusqueda");
     let cliente=buscarCliente(valorCedula);
