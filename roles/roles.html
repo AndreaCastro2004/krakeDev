@@ -2,19 +2,21 @@
 <html>
 
 <head>
-
+    <script src="roles.js"></script>
+    <script src="utilitarios.js"></script>
+    <link href="roles.css" rel="stylesheet"/>
 </head>
 
-<body>
+<body onload="mostrarObcionEmpleado();">
     <div class="menu">
         <div class="contenedorBoton">
-            <input type="button" value="EMPLEADO" class="estiloBoton" />
+            <input type="button" value="EMPLEADO" class="estiloBoton" onclick="mostrarObcionEmpleado();" />
         </div>
         <div class="contenedorBoton">
-            <input type="button" value="ROL" class="estiloBoton"/>
+            <input type="button" value="ROL" class="estiloBoton" onclick="mostrarObcionRol();"/>
         </div>
         <div class="contenedorBoton">
-            <input type="button" value="RESUMEN" class="estiloBoton" />
+            <input type="button" value="RESUMEN" class="estiloBoton" onclick="mostrarObcionResumen();"/>
         </div>
 
     </div>
