@@ -210,3 +210,16 @@ limpiar=function(){
     esNuevo=false
     deshabilitarDatos();
 }
+buscarPorRol=function(){
+    let cedula;
+    let empleadoEncontrado;
+    cedula=recuperarTexto("txtBusquedaCedulaRol");
+    empleadoEncontrado=buscarEmpleado(cedula)
+    if(empleadoEncontrado!=null){
+        mostrarTexto("infoCedula",empleadoEncontrado.cedula);
+        mostrarTexto("infoNombre",empleadoEncontrado.nombre+" "+empleadoEncontrado.apellido);
+        mostrarTexto("infoSueldo",empleadoEncontrado.sueldo);
+    }else{
+        alert("EL EMPLEADO NO EXISTE")
+    }
+}
