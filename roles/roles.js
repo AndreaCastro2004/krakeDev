@@ -9,11 +9,7 @@ mostrarObcionEmpleado=function(){
     ocultarComponente("divRol");
     ocultarComponente("divResumen");
     mostrarEmpleado();
-    deshabilitarComponente("txtCedula");
-    deshabilitarComponente("txtNombre");
-    deshabilitarComponente("txtApellido");
-    deshabilitarComponente("txtSueldo");
-    deshabilitarComponente("btnGuardar");
+    deshabilitarDatos();
 }
 mostrarObcionRol=function(){
     mostrarComponente("divRol");
@@ -100,11 +96,7 @@ guardar=function(){
             if(nuevoEmpleado==true){
                 alert("EMPLEADO GUARDADO CORRECTAMENTE");
                 mostrarEmpleado();
-                deshabilitarComponente("txtCedula");
-                deshabilitarComponente("txtNombre");
-                deshabilitarComponente("txtApellido");
-                deshabilitarComponente("txtSueldo");
-                deshabilitarComponente("btnGuardar");
+                deshabilitarDatos();
             }else{
                 alert("YA EXISTE UN EMPLEADO CON LA CEDULA: "+empleado.cedula);
             }
@@ -173,4 +165,11 @@ validaciones=function(valor1,valor2,valor3,valor4){
             hayErrores=true
     }
     return hayErrores;
+}
+deshabilitarDatos=function(){
+    deshabilitarComponente("txtCedula");
+    deshabilitarComponente("txtNombre");
+    deshabilitarComponente("txtApellido");
+    deshabilitarComponente("txtSueldo");
+    deshabilitarComponente("btnGuardar");
 }
