@@ -255,31 +255,36 @@ calcularRol=function(){
 //GUARDAR ROL RETO 50
 
 buscarRol=function(cedula){ //Cedula Empleado
-    let elementoRol=null
+    let elementoRol;
     for(let i=0;i<roles.length;i++){
         elementoRol=roles[i];
         if(elementoRol.cedula==cedula){
-            return elementoRol;
+            return rol;
+        }else{
+            return null
         }
     }
-    if(elementoRol==null){
-        return elementoRol;
-    }
-
+    
 }
-//Esta vercion utiliza la funcion buscar
 agregarRol=function(rol){  
     let rolElemento;
+    let cedulaExiste=false
+    //Tuviste fallas aqui ya que si se te guardaba una vez luego se volvia a guardar pilas
     if(roles.length==0){
         roles.push(rol);
         alert("AGREGADO EXITOSAMENTE");
     }else{
-        rolElemento=buscarRol(rol.cedula);
-        if(rolElemento==null){
+        for(let i=0;i<roles.length;i++){
+            rolElemento=roles[i];
+            if(rol.cedula == rolElemento.cedula){
+                alert("YA EXISTE");
+                cedulaExiste=true;
+                break;
+            }
+        }
+        if(cedulaExiste==false){
             roles.push(rol);
             alert("AGREGADO EXITOSAMENTE");
-        }else{
-            alert("YA EXISTE")
         }
     }
 }
