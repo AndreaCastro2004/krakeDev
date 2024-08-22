@@ -269,7 +269,7 @@ buscarRol=function(cedula){ //Cedula Empleado
 agregarRol=function(rol){  
     let rolElemento;
     let cedulaExiste=false
-    //Tuviste fallas aqui ya que si se te guardaba una vez luego se volvia a guardar pilas
+    //otra forma de agregar sin utilizar  buscar rol
     if(roles.length==0){
         roles.push(rol);
         alert("AGREGADO EXITOSAMENTE");
