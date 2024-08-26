@@ -178,6 +178,12 @@ validaciones=function(valor1,valor2,valor3,valor4){
             mostrarTexto("lblErrorSueldo","DEBE INGRESAR UN NUMERO FLOTANTE");
             hayErrores=true
     }
+    if(hayErrores==false){
+        mostrarTexto("lblErrorCedula"," ");
+        mostrarTexto("lblErrorNombre"," ");
+        mostrarTexto("lblErrorApellido"," ");
+        mostrarTexto("lblErrorSueldo"," ");
+    }
     return hayErrores;
 }
 deshabilitarDatos=function(){
