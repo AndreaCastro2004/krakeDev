@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <script src="utilitarios.js"></script>
+        <script src="orden.js"></script>
+        <link href="orden.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <div class="principal">
+            <div class="logoEscuela">
+                <img src="./imagenes/logoKrakeDev.png" width="80%" />
+            </div>
+            <div class="contenido">
+                <div class="titulo">
+                    AGREGAR PERSONA
+                </div>
+                <div class="ingresoDatos">
+                    <div class="tituloCampo">
+                        NOMBRE
+                    </div>
+                    <div>
+                        <input type="text" id="txtNombre"  class="cajaTexto"/>
+                        <div class="error" id="lblError1"></div>
+                    </div>
+                </div>
+                <div class="ingresoDatos">
+                    <div class="tituloCampo">
+                        EDAD
+                    </div>
+                    <div>
+                        <input type="text" id="txtEdad" class="cajaTexto"/>
+                        <div class="error" id="lblError2"></div>
+                    </div>
+                </div>    
+                <div class="botones">
+                    <div class="contenedorBoton">
+                        <input type="button" value="GUARDAR" onclick="agregarPersona()" class="estiloBoton"/>
+                    </div>
+                </div>
+            </div>
+            <div class="areaResultado">
+
+            </div>
+        </div>
+    </body> 
+</html>
