@@ -22,6 +22,28 @@ agregarPersona=function(){
         nuevaPersona.nombre=nombre;
         nuevaPersona.edad=edad;
         personas.push(nuevaPersona);
+        mostrarTexto("lblError1","");
+        mostrarTexto("lblError2"," ")
         alert("PERSONA AGREGADA CORRECTAMENTE");
+        mostrarPersona();
     }
+}
+
+//Parte 2
+mostrarPersona=function(){
+    let cmpTabla=document.getElementById("tablaClientes");
+    let contenidoTabla="<table id=\"contenidoTabla\"><tr>"
+    +"<th>EDAD</th>"
+    +"<th>NOMBRE</th>"
+    +"</tr>"
+    let elementoPersona;
+    for(let i=0;i<personas.length;i++){
+        elementoPersona=personas[i]
+        contenidoTabla+="<tr>"
+        +"<td>"+elementoPersona.edad+"</td>"
+        +"<td>"+elementoPersona.nombre+"</td>"
+        +"</tr>"
+    }
+    contenidoTabla+="</table>"
+    cmpTabla.innerHTML=contenidoTabla;
 }
